@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #b0c7e2;
+  --green: #81d6bd;
+  --red: #e585ad;
+  --black: #27282a;
+  --text-color: #4b5563;
+  --light-text-color: #9b9b9b;
+  --bg-gray: #f6f6f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/*====================== REUSABLE CSS CLASSES ======================*/
+section {
+  margin-bottom: 5rem;
+  scroll-margin-top: 2rem;
+}
+
+.inner-section {
+  padding-inline: 6rem;
+}
+
+.section-title {
+  color: var(--black);
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.subtitle {
+  color: var(--black);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.descriptions {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.mockup {
+  width: 220px;
+  border: 4px solid var(--black);
+  border-radius: 15px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}

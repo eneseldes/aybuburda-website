@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Federo&display=swap");
+
+.dot {
+  opacity: 0.4;
+}
+
+.landing-page {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--blue);
+  color: white;
+  height: 92vh;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .manifesto {
+    font-family: "Federo", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      position: relative;
+      z-index: 1;
+      font-size: 9rem;
+      background-color: var(--blue);
+    }
+
+    &__subtitles {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.25rem;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto 5rem;
+  }
+
+  .dot,
+  .mockup {
+    position: absolute;
+  }
+
+  .dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: var(--bg-gray);
+    color: var(--black);
+    font-size: 8rem;
+    border-radius: 50%;
+
+    &:nth-child(1) {
+      top: -100px;
+      left: -160px;
+      transform: rotate(25deg);
+      background-color: #a4e6c8;
+      color: rgba(255, 255, 255, 0.545);
+    }
+
+    &:nth-child(2) {
+      top: -100px;
+      right: -160px;
+      transform: rotate(30deg);
+      background-color: #d6aed1;
+      color: rgba(255, 255, 255, 0.545);
+    }
+
+    &:nth-child(3) {
+      align-items: start;
+      padding-top: 3.5rem;
+      width: 1800px;
+      height: 1000px;
+      bottom: -800px;
+      left: -12%;
+      background-color: #dbedfb;
+    }
+  }
+
+  .mockup {
+    z-index: 1;
+
+    &:nth-child(1) {
+      bottom: -150px;
+      transform: rotate(-19deg);
+      z-index: 2;
+    }
+
+    &:nth-child(2) {
+      bottom: -250px;
+      transform: rotate(5deg);
+      left: 150px;
+    }
+
+    &:nth-child(3) {
+      bottom: -370px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:nth-child(4) {
+      bottom: -320px;
+      right: 150px;
+      transform: rotate(15deg);
+      z-index: 2;
+    }
+
+    &:nth-child(5) {
+      bottom: -160px;
+      right: -30px;
+      transform: rotate(-19deg);
+    }
+  }
+}

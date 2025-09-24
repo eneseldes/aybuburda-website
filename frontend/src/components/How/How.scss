@@ -1,0 +1,44 @@
+.how {
+  .how-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    text-align: center;
+
+    .how-card {
+      cursor: default;
+      background-color: var(--bg-gray);
+      display: grid;
+      row-gap: 1.5rem;
+      height: 100%;
+      padding: 4rem 2rem;
+      border-radius: 30px;
+      transition: box-shadow 0.4s, transform 0.4s;
+
+      .card-upper {
+        display: grid;
+        row-gap: 0.8rem;
+
+        .icon {
+          font-size: 4rem;
+          color: var(--black);
+          transition: 0.4s;
+        }
+
+        .hint {
+          color: var(--light-text-color);
+          font-style: italic;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.063);
+
+        .icon {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.categories {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  color: var(--black);
+  font-weight: 600;
+
+  &__wrapper {
+    display: flex;
+    animation: scroll 30s linear infinite;
+
+    .category-box {
+        cursor: default;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+      min-width: 320px;
+      height: 65px;
+      margin-inline: 1rem;
+      background: var(--bg-gray);
+      border-radius: 15px;
+      transition: box-shadow 0.4s, transform 0.4s;
+
+      .icon {
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      &:hover {
+        box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.063);
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); // yarıya kadar kaydır, sonra tekrar başa
+  }
+}

@@ -1,0 +1,162 @@
+.by-what {
+  .page-selector {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+
+    .selected {
+      transform: translateY(-5px);
+
+      .page-name {
+        top: -2.2rem !important;
+        font-size: 1rem !important;
+      }
+    }
+
+    .page-dot {
+      position: relative;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--black);
+      border-radius: 50%;
+      transition: background 0.4s, transform 0.4s;
+
+      .page-name {
+        pointer-events: none;
+        opacity: 0;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 600;
+        width: 200px;
+        position: absolute;
+        top: -1.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.4s;
+      }
+
+      .icon {
+        font-size: 1.25rem;
+        line-height: 0;
+        color: white;
+      }
+
+      // Mavi
+      &:nth-child(1),
+      &:nth-child(4),
+      &:nth-child(7) {
+        &:hover,
+        &.selected {
+          background-color: var(--blue);
+
+          .page-name {
+            color: var(--blue);
+            opacity: 1;
+          }
+        }
+      }
+
+      // Yeşil
+      &:nth-child(2),
+      &:nth-child(5),
+      &:nth-child(8) {
+        &:hover,
+        &.selected {
+          background-color: var(--green);
+
+          .page-name {
+            color: var(--green);
+            opacity: 1;
+          }
+        }
+      }
+
+      // Kırmızı
+      &:nth-child(3),
+      &:nth-child(6) {
+        &:hover,
+        &.selected {
+          background-color: var(--red);
+
+          .page-name {
+            color: var(--red);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .pages-container {
+    .page-titles {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 2rem;
+      font-weight: 600;
+
+      div {
+        &:nth-child(1) {
+          color: var(--blue);
+        }
+
+        &:nth-child(2) {
+          color: var(--green);
+        }
+
+        &:nth-child(3) {
+          color: var(--red);
+        }
+      }
+    }
+
+    .page-boxes {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+
+      .page-container {
+        text-align: center;
+        .page-title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+
+        &:nth-child(1) .page-title {
+            color: var(--blue);
+        }
+
+        &:nth-child(2) .page-title {
+            color: var(--green);
+        }
+
+        &:nth-child(3) .page-title {
+            color: var(--red);
+        }
+
+        .pages-one-by-one {
+          display: grid;
+          row-gap: 2rem;
+          padding: 2rem 2rem;
+          border-radius: 30px;
+
+          &.student-pages {
+            background-color: var(--blue);
+          }
+
+          &.mentor-pages {
+            background-color: var(--green);
+          }
+
+          &.admin-pages {
+            background-color: var(--red);
+          }
+        }
+      }
+    }
+  }
+}

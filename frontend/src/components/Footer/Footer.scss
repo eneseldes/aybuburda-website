@@ -1,0 +1,56 @@
+footer {
+  margin-top: 10rem;
+  position: relative;
+  background-color: var(--black);
+  border-radius: 30px;
+  padding-block: 15rem 4rem;
+  text-align: center;
+
+  .us {
+    position: absolute;
+    top: -6rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    .person {
+      display: grid;
+      row-gap: 0.4rem;
+      width: 300px;
+
+      &__photo {
+        width: 190px;
+        margin: 0 auto 0.5rem;
+
+        img {
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      // subtitle override
+      .subtitle {
+        color: #EEEEEE;
+      }
+
+      &__department {
+        font-style: italic;
+        color: var(--light-text-color);
+      }
+    }
+  }
+
+  .dots {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center;
+
+    div {
+      background-color: #EEEEEE;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+  }
+}
