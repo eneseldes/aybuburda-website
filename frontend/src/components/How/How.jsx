@@ -4,9 +4,10 @@ import { SiGoogletasks } from "react-icons/si";
 import { FaComments } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaBell } from "react-icons/fa";
+import { motion } from "framer-motion";
+import AnimatedSection from "../AnimatedSection";
 
 import "./How.scss";
-import AnimatedSection from "../AnimatedSection";
 
 function How() {
   const howInfos = [
@@ -59,14 +60,24 @@ function How() {
       <div className="section-title">Nasıl?</div>
       <div className="how-cards">
         {howInfos.map((info, index) => (
-          <div className="how-card">
+          <motion.div
+            initial={{ opacity: 0, y: -40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 1.5,
+              delay: index * 0.2,
+              ease: [0.65, 0, 0.35, 1],
+            }}
+            className="how-card"
+          >
             <div className="card-upper">
               <div className="icon">{info.icon}</div>
               <div className="subtitle">{info.title}</div>
               <div className="hint">{info.hint}</div>
             </div>
             <div className="card-lower">{info.description}</div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </AnimatedSection>

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaHashtag } from "react-icons/fa";
 import { PiHandshake } from "react-icons/pi";
-import img from "./admin.png";
 import "./LandingPage.scss";
 import AnimatedItem from "../AnimatedItem";
 
@@ -37,8 +36,8 @@ function LandingPage() {
           initial={{ x: -150, width: 0 }}
           animate={{ x: 0, width: 150 }}
           transition={{
-            delay: 1.1,
-            duration: 1,
+            delay: 0.8,
+            duration: 0.8,
             ease: [0.65, 0, 0.35, 1],
           }}
           className="manifesto__subtitles"
@@ -52,7 +51,7 @@ function LandingPage() {
         initial={{ opacity: 0, y: 40, height: 0 }}
         animate={{ opacity: 1, y: 0, height: 50 }}
         transition={{
-          delay: 2,
+          delay: 1.7,
           duration: 1,
           ease: [0.65, 0, 0.35, 1],
         }}
@@ -81,7 +80,7 @@ function LandingPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
           transition={{
-            delay: 2.3,
+            delay: 2.4,
             duration: 2,
             ease: [0.23, 1, 0.28, 1],
           }}
@@ -97,7 +96,7 @@ function LandingPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
           transition={{
-            delay: 2.5,
+            delay: 2.7,
             duration: 2,
             ease: [0.23, 1, 0.28, 1],
           }}
@@ -113,61 +112,61 @@ function LandingPage() {
           initial={{ bottom: -500 }}
           animate={{ bottom: -150 }}
           transition={{
-            delay: 2,
+            delay: 1.7,
             duration: 1,
             ease: [0.65, 0, 0.35, 1],
           }}
           className="mockup"
         >
-          <img src={img} alt="Uygulama Görüntüsü" />
+          <img src="/media/app-photos/etkinlikler-ogrenci-anaekran.png" alt="Uygulama Görüntüsü" />
         </motion.div>
         <motion.div
           initial={{ bottom: -500 }}
           animate={{ bottom: -250 }}
           transition={{
-            delay: 2,
+            delay: 1.7,
             duration: 1,
             ease: [0.65, 0, 0.35, 1],
           }}
           className="mockup"
         >
-          <img src={img} alt="Uygulama Görüntüsü" />
+          <img src="/media/app-photos/giris.png" alt="Uygulama Görüntüsü" />
         </motion.div>
         <motion.div
           initial={{ bottom: -500 }}
           animate={{ bottom: -350 }}
           transition={{
-            delay: 2,
+            delay: 1.7,
             duration: 1,
             ease: [0.65, 0, 0.35, 1],
           }}
           className="mockup"
         >
-          <img src={img} alt="Uygulama Görüntüsü" />
+          <img src="/media/app-photos/kayit.png" alt="Uygulama Görüntüsü" />
         </motion.div>
         <motion.div
           initial={{ bottom: -500 }}
           animate={{ bottom: -320 }}
           transition={{
-            delay: 2,
+            delay: 1.7,
             duration: 1,
             ease: [0.65, 0, 0.35, 1],
           }}
           className="mockup"
         >
-          <img src={img} alt="Uygulama Görüntüsü" />
+          <img src="/media/app-photos/anasayfa-ogrenci.png" alt="Uygulama Görüntüsü" />
         </motion.div>
         <motion.div
           initial={{ bottom: -500 }}
           animate={{ bottom: -160 }}
           transition={{
-            delay: 2,
+            delay: 1.7,
             duration: 1,
             ease: [0.65, 0, 0.35, 1],
           }}
           className="mockup"
         >
-          <img src={img} alt="Uygulama Görüntüsü" />
+          <img src="/media/app-photos/gorev-mentor-anaekran.png" alt="Uygulama Görüntüsü" />
         </motion.div>
       </div>
     </motion.section>

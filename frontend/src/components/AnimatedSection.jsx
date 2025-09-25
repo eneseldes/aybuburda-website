@@ -13,7 +13,7 @@ const AnimatedSection = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{
-        duration: 1.2,
+        duration: 1.5,
         delay: index * 0.2,
         ease: [0.65, 0, 0.35, 1],
       }}
